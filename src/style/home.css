@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+ 
+.Home .wrap {
+    width: 60%;
+    background-color: white;
+    height: 100%;
+    margin: auto;
+    padding: 4%;
+    border-radius: 6px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.Home section {
+    margin-top: 8%;
+}
+
+.Home .welcome {
+    float: right;
+}
+.Home .welcome button {
+background-color: transparent;
+margin-bottom: 6px;
+}
+.Home .float-clear {
+    clear: both;
+}
+
+.Home h1 {
+    font-size: 60px;
+    color: #112e50;
+    margin-bottom: 10%;
+    text-align: center;
+     font-family: 'Merriweather', serif;
+}
+
+.Home th,
+.Home td {
+    padding: 3px;
+}
+
+.Home .open-diary-write-btn,
+.Home .my-diary-write-btn {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+
+}
+.Home .open-diary-write-btn a,
+.Home .my-diary-write-btn a {
+    color: black;
+}
+
+
+
+
+.Home table {
+    text-align: center;
+}
+
+.Home table tr th:nth-child(2) {
+    width: 50%;
+}
+
+.Home table tr th:nth-child(3) {
+    width: 120px;
+}
+
+.Home table .hit {
+    min-width: 60px;
+    width: 70px;
+}
+
+.Home table .date {
+    width: 100px;
+}
+
+.Home table .index-num {
+    min-width: 20px;
+    width: 40px;
+}
+
+.Home table tr th {
+    text-align: center;
+}
+
+.Home table .thisp {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 120px;
+}
+
+.Home table .table-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 420px;
+    text-align: left;
+}
+
+.Home .pagination {
+   
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.Home .pagination li {
+    margin-right: 20px;
+
+}
+
+.Home a {
+    text-decoration: none;
+    
+
+}
+.Home .pagination .active{
+    font-weight: bold;
+    
+    font-size: 1.1em;
+    
+}
+.Home .pagination .active a {
+   vertical-align: 30px;
+   color: #071947;
+}
+
+.Home .pagination li a {
+    color: #c1c1c1;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .Home .wrap {
+        width: 95%;
+        height: 100%;
+    }
+    .Home .pagination {
+        margin-left: 15%;
+    }
+}
+
+

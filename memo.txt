@@ -1,0 +1,7 @@
+1. 컴포넌트들...
+
+1. SignIn - 처음 사이트 들어왔을때 보이는 화면
+2. SignUp - 회원가입 페이지
+3. Home - 공개게시판이 보이는 메인 화면
+4. MyDailyLogRead - 내 일지 읽기
+5. MyDailyLogWrite - 내 일지 쓰기

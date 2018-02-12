@@ -1,0 +1,92 @@
+.Sign-up .input-box {
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    background-color: #091c44d9;
+    padding: 5%;
+    margin-bottom: 20vh;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+
+.Sign-up .id-input,
+.Sign-up .pwd-input,
+.Sign-up .pwd-confirm-input,
+.Sign-up .email-input,
+.Sign-up .lifemoto {
+    margin-bottom: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #d7cacad4;
+    color: #d7cacad4;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.Sign-up .email-input {
+    display: inline-block;
+    margin-left: 20%;
+}
+
+.Sign-up .email-confirm {
+    display: inline-block;
+    background-color: #d7cacad4;
+    border-radius: 25px;
+    margin-left: 20px;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.Sign-up .sign-up-btn {
+    margin-left: 40%;
+    margin-top: 70px;
+    background-color: #d7cacad4;
+}
+
+.Sign-up h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #cfcfcfa6;
+    margin-bottom: 20%;
+     font-family: 'Merriweather', serif;
+     font-weight: bold;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .Sign-up .input-box {
+        width: 90vw;
+        margin: auto;
+        margin-top: 5vh;
+        background-color: #091c44d9;
+        /* padding: 5%; */
+        margin-bottom: 20vh;
+    }
+    .Sign-up h1 {
+        font-size: 60px;
+    }
+
+
+    .Sign-up .id-input,
+    .Sign-up .pwd-input,
+    .Sign-up .pwd-confirm-input,
+    .Sign-up .email-input,
+    .Sign-up .lifemoto {
+        width: 90%;
+    }
+
+    .Sign-up .email-input {
+    	 display: block;
+    margin-left: 0%;
+        margin-left: 14px;
+    }
+    .Sign-up .sign-up-btn {
+    margin-left: 30%;
+   
+}
+
+
+}

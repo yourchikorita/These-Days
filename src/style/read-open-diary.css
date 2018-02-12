@@ -1,0 +1,72 @@
+.Read-open-diary .jumbo {
+    background-color: #f2f2f2;
+        padding: 2rem;
+}
+
+.Read-open-diary button {
+    background-color: transparent;
+}
+
+.Read-open-diary .wrap {
+    width: 60%;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 6px;
+    margin: auto;
+    padding: 4%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.Read-open-diary .float-clear {
+    clear: both;
+}
+
+.Read-open-diary h1 {
+    font-size: 60px;
+    color: #112e50;
+    margin-bottom: 10%;
+    text-align: center;
+    margin-top: 8%;
+    font-family: 'Merriweather', serif;
+}
+
+.Read-open-diary .welcome {
+    float: right;
+}
+
+.Read-open-diary .welcome button {
+    margin-right: 25px;
+    margin-bottom: 6px;
+}
+
+.Read-open-diary button {
+    font-size: 13px;
+    padding: 6px;
+}
+
+.Read-open-diary button a,
+.Read-open-diary header span {
+    color: #8fa2af;
+}
+
+
+.Read-open-diary .button-box button {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .Read-open-diary .wrap {
+        width: 95%;
+        height: 100%;
+    }
+    .Read-open-diary h1 {
+        display: none;
+    }
+}
+
+.Read-open-diary .button-box {
+    text-align: center;
+}
