@@ -1,6 +1,6 @@
 .Read-my-diary .jumbo {
-    background-color: #8599a8;
-        padding: 2rem;
+    background-color: #f2f2f2;
+    padding: 2rem;
 }
 
 .Read-my-diary button {
@@ -9,14 +9,14 @@
 
 .Read-my-diary .wrap {
     width: 60%;
-    background-color: #496d88;
+    background-color: #fff;
     height: 100%;
-    border-radius: 6px;
     margin: auto;
     padding: 4%;
     margin-top: 5%;
     margin-bottom: 10%;
-    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    border: 10px solid #f594a7;
+    /*box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);*/
 }
 
 .Read-my-diary .float-clear {
@@ -25,11 +25,12 @@
 
 .Read-my-diary h1 {
     font-size: 60px;
-    color: #cfcfcfa6;
+    color: #f594a7;
     margin-bottom: 10%;
     text-align: center;
     margin-top: 8%;
     font-family: 'Merriweather', serif;
+    font-weight: bold;
 }
 
 .Read-my-diary .welcome {

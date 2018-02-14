@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
-import Home from './components/Home';
+import Routers from './Routers';
+import { Provider } from 'react-redux';
+import reducer from './reducer';
+import {createStore} from 'redux';
+import SignIn from './components/SignIn/index'
 
-import Routertest from './components/Routertest';
+let store = createStore(reducer);
+console.log('index = ',store.getState());
 
-
-ReactDOM.render(<Routertest />, document.getElementById('root'));
+ReactDOM.render(
+<Provider store={store}><SignIn /></Provider>, document.getElementById('root'));
 

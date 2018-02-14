@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
- 
+
 .Home .wrap {
     width: 60%;
     background-color: white;
     height: 100%;
     margin: auto;
     padding: 4%;
-    border-radius: 6px;
     margin-top: 5%;
     margin-bottom: 10%;
-    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    /*box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);*/
 }
 
 .Home section {
@@ -19,25 +18,29 @@
 .Home .welcome {
     float: right;
 }
+
 .Home .welcome button {
-background-color: transparent;
-margin-bottom: 6px;
+    background-color: transparent;
+    margin-bottom: 6px;
 }
+
 .Home .float-clear {
     clear: both;
 }
 
 .Home h1 {
     font-size: 60px;
-    color: #112e50;
+    color: #f594a7;
     margin-bottom: 10%;
     text-align: center;
-     font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
 }
 
 .Home th,
+.Home tr,
 .Home td {
-    padding: 3px;
+    padding: 1px;
 }
 
 .Home .open-diary-write-btn,
@@ -46,8 +49,8 @@ margin-bottom: 6px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #f2f2f2;
-
 }
+
 .Home .open-diary-write-btn a,
 .Home .my-diary-write-btn a {
     color: black;
@@ -102,30 +105,28 @@ margin-bottom: 6px;
 }
 
 .Home .pagination {
-   
+
     margin-left: 35%;
     margin-top: 10%;
 }
 
 .Home .pagination li {
     margin-right: 20px;
-
 }
 
 .Home a {
     text-decoration: none;
-    
+}
 
-}
-.Home .pagination .active{
+.Home .pagination .active {
     font-weight: bold;
-    
+
     font-size: 1.1em;
-    
 }
+
 .Home .pagination .active a {
-   vertical-align: 30px;
-   color: #071947;
+    vertical-align: 30px;
+    color: #071947;
 }
 
 .Home .pagination li a {
@@ -142,5 +143,3 @@ margin-bottom: 6px;
         margin-left: 15%;
     }
 }
-
-

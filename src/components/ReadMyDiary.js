@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router,  Route,  Link,Switch} from 'react-router-dom';
-import { Button,form,FormControl,Table,responsive,FormGroup,ControlLabel,Jumbotron } from 'react-bootstrap';
-import {Tabs, Tab} from 'react-bootstrap-tabs';
+import {Link} from 'react-router-dom';
+import { Button,Jumbotron } from 'react-bootstrap';
 import '../style/read-my-diary.css';
 
 class ReadMyDiary extends Component {
@@ -10,7 +9,7 @@ class ReadMyDiary extends Component {
       <div className="Read-my-diary">
       <div className="wrap">
 		<header>
-	       	<span>악하게 살지 말자</span>
+	       	
 	       	<span className="welcome">
 	       	<Button ><Link to="/home">홈</Link></Button>
 	       	<Button ><Link to="/sign-in">로그아웃</Link></Button>
@@ -23,7 +22,7 @@ class ReadMyDiary extends Component {
 	    	<h1>These Days</h1>
 	    	<p>	개인 일기 </p>
 
-	    	<h3>오늘 하루는 카페 탐방을 하였다.......</h3>
+	    	<h4>오늘 하루는 카페 탐방을 하였다.......</h4>
 	    	<hr />
 	    	<p className="written-date">2018.01.01 수 22:10:33</p>
 	    	<Jumbotron className="jumbo">

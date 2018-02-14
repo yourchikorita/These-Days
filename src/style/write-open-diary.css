@@ -1,0 +1,85 @@
+.Write-open-diary .welcome {
+    float: right;
+}
+
+.Write-open-diary button {
+    font-size: 13px;
+    padding: 6px;
+    background-color: transparent;
+}
+
+.Write-open-diary button a,
+.Write-open-diary header span {
+    color: #8f9192;
+}
+
+.Write-open-diary .wrap {
+    width: 60%;
+    background-color: #fff;
+    height: 100%;
+    margin: auto;
+    padding: 4%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+   /* box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);*/
+}
+
+.Write-open-diary .float-clear {
+    clear: both;
+}
+
+.Write-open-diary h1 {
+    font-weight: bold;
+    font-size: 60px;
+    color: #f594a7;
+    margin-bottom: 10%;
+    text-align: center;
+    margin-top: 8%;
+    font-family: 'Merriweather', serif;
+}
+
+.Write-open-diary .diary-contents {
+    height: 300px;
+}
+
+.Write-open-diary .btn-box {
+    text-align: center;
+}
+
+.Write-open-diary .btn-box button,
+.Write-open-diary header button {
+    margin-right: 25px;
+}
+
+.Write-open-diary .diary-title {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #e5eaee;
+    color: #8fa2af;
+    font-size: 2em;
+}
+
+.Write-open-diary .diary-contents {
+    height: 300px;
+    background-color: transparent;
+    border: 2px solid #e5eaee;
+    color: #8fa2af;
+}
+
+
+.Write-open-diary .diary-title::placeholder ,.Write-open-diary .diary-contents::placeholder {
+  color: #8fa2af;
+}
+@media only screen and (max-width: 500px) {
+
+    .Write-open-diary .wrap {
+        width: 95%;
+        height: 100%;
+    }
+    .Write-open-diary h1 {
+        display: none;
+    }
+    .Write-open-diary .diary-contents {
+        height: 52vh; 
+    }
+}

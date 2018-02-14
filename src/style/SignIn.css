@@ -9,7 +9,7 @@
 .SignIn h1 {
     text-align: center;
     font-size: 60px;
-    color: #cfcfcfa6;
+    color: #f594a7;
     margin-bottom: 10%;
     font-family: 'Merriweather', serif;
     font-weight: bold;
@@ -19,12 +19,12 @@
 
 .SignIn .Container {
     width: 35vw;
-    background-color: #091c44d9;
+    background-color: #fff;
     margin: auto;
     margin-top: 25vh;
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0,0,0,.19);
+    
+  /*  box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0,0,0,.19);*/
 
 }
 

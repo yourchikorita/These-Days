@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Button,form,FormGroup,ControlLabel,FormControl,HelpBlock,Table,responsive } from 'react-bootstrap';
+import { Button,FormControl, } from 'react-bootstrap';
 import '../style/SignUp.css';
-import {BrowserRouter as Router,  Route,  Link,Switch} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class SignUP extends Component {
   render() {

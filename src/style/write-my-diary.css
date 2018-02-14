@@ -15,14 +15,14 @@
 
 .Write-my-diary .wrap {
     width: 60%;
-    background-color: #496d88;
+    background-color: #fff;
     height: 100%;
     margin: auto;
-    border-radius: 6px;
     padding: 4%;
     margin-top: 5%;
     margin-bottom: 10%;
-    box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    border: 10px solid #f594a7;
+   /* box-shadow: 0 2px 12px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .19);*/
 }
 
 .Write-my-diary .float-clear {
@@ -31,8 +31,9 @@
 
 .Write-my-diary h1 {
     font-size: 60px;
-    color: #cfcfcfa6;
+    color: #f594a7;
     margin-bottom: 10%;
+    font-weight: bold;
     text-align: center;
     margin-top: 8%;
     font-family: 'Merriweather', serif;
@@ -54,7 +55,7 @@
 .Write-my-diary .diary-title {
     border: none;
     background-color: transparent;
-    border-bottom: 2px solid #8fa2af;
+    border-bottom: 2px solid #e5eaee;
     color: #8fa2af;
     font-size: 2em;
 }
@@ -62,7 +63,7 @@
 .Write-my-diary .diary-contents {
     height: 300px;
     background-color: transparent;
-    border: 2px solid #8fa2af;
+    border: 2px solid #e5eaee;
     color: #8fa2af;
 }
 
