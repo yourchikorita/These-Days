@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button,Table,responsive,condensed } from 'react-bootstrap';
 import '../style/SignIn.css';
 
 export default class OpenBoard extends Component {

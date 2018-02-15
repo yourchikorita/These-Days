@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import { Button,Table,responsive,condensed } from 'react-bootstrap';
+import { Button,Table } from 'react-bootstrap';
 import {Tabs, Tab} from 'react-bootstrap-tabs';
 import Pagination from "react-js-pagination";
-import OpenBoard from './OpenBoard';
-import MyBoard from './MyBoard';
-import '../style/home.css';
+import OpenBoard from '../OpenBoard';
+
+import '../../style/home.css';
 
 
 class Home extends Component {
@@ -26,7 +26,7 @@ class Home extends Component {
     //   });
     // };
   	
- console.log(this.props);
+ console.log('home presenter',this.props);
     return (
       <div className="Home">
       <div className="wrap">

@@ -5,11 +5,19 @@ import { Link} from 'react-router-dom';
 import firebase from 'firebase';
 import fire from  '../../fire';
 
-class SignIn extends Component {
 
-  onClickGoogleLogin(){
+
+class SignIn extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      myname:'hello~~~~~~~~~~~~'
+    }
+  }
+  onClickGoogleLogin(){ 
     var auth = fire.auth();
     var provider = new firebase.auth.GoogleAuthProvider();
+   
     auth.onAuthStateChanged(function(user){
     if(user) {
       //성공했을때 실행!
@@ -20,16 +28,25 @@ class SignIn extends Component {
         console.log("  Name: "+profile.displayName);
         console.log("  Email: "+profile.email);
         console.log("  Photo URL: "+profile.photoURL);
+       
+
       });
     }else{
       //팝업창 띄우기 로긴안됫을때 띄우기
       auth.signInWithPopup(provider);
     }
    });
+  
   }
 
+  // goToHomePage(){
+
+  // }
+
   render() {
-    console.log('in presenter',this.props);
+console.log(this.state.myname);
+    console.log('in signin presenter',this.props);
+    
     return (
       <div className="SignIn">
         <div className="SignIn Container" >
@@ -43,15 +60,22 @@ class SignIn extends Component {
                 placeholder="Enter PWD"
             />
             <div className="SignIn buttons">
-              
-              <Button onClick={this.onClickGoogleLogin} >구글로 로그인</Button>
+                <Button onClick={this.props.login}>test</Button>
+                
+                {
+                  (this.props.isLogin === true) ?
+                  <Button><Link to="/home">홈페이지가기</Link></Button> :  
+                  <Button onClick={this.onClickGoogleLogin} >구글로 로그인</Button>
+
+                } 
+ 
             </div>
-
+ 
         </div>
-
       </div>
     );
   }
 }
 
 export default SignIn;
+

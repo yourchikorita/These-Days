@@ -13,6 +13,7 @@ import {
   Link,Switch
 } from 'react-router-dom'
 
+console.log('inrouter=',this.props);
 
 const Routers = () => (
   <Router>
@@ -35,6 +36,7 @@ const Routers = () => (
 )
 
 
+console.log('inrouter=',this.props);
 
 
 
