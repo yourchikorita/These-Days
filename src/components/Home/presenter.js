@@ -16,7 +16,7 @@ class Home extends Component {
     };
   }
   handlePageChange(pageNumber) {
-   // console.log(`active page is ${pageNumber}`);
+    console.log(`active page is ${pageNumber}`);
     this.setState({activePage: pageNumber});
   }
   render() {
@@ -33,7 +33,7 @@ class Home extends Component {
 		<header>
 	       
 	       	<span className="welcome">
-	       	<span>누군가님 환영합니다.</span>
+	       	<span>{this.props.currentUserName} 님 </span>
 	       	<Button ><Link to="/sign-in">로그아웃</Link></Button>
 	       	</span>
 	    </header>

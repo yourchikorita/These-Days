@@ -1,5 +1,6 @@
 //import
 
+
 //Actions
 const LOGIN = 'LOGIN';
 const LOGOUT='LOGOUT';
@@ -18,6 +19,10 @@ function logout(){
 }
 
 //Reducer
+
+
+
+
 const initialUserName = 'who';
 
 const initialState ={
@@ -25,6 +30,7 @@ const initialState ={
 	currentUserName : initialUserName,
 	listOpenDiary : 'this is open diary'
 }
+
 
 function reducer(state=initialState,action){
 	switch(action.type){
@@ -38,10 +44,14 @@ function reducer(state=initialState,action){
 }
 //Reducer Functions
 function applyLogin(state){
+
+
+	var testName='로그인 된 이름';
+
 	return{
 		...state,
 		isLogin:true,
-		currentUserName : 'login eunjeong'
+		currentUserName : testName
 
 	}
 }
