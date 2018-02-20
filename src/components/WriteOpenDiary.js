@@ -2,8 +2,19 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { Button,FormControl } from 'react-bootstrap';
 import '../style/write-open-diary.css';
+import firebase from 'firebase';
 
 class WriteOpenDiary extends Component {
+	saveData(ev){
+    const database = firebase.database();
+    const diaryRef = database.ref('/diary');
+	   
+	    diaryRef.push({
+	     title:this.title.value,
+	      text:this.text.value
+	    });
+		
+  }
   render() {
     return (
       <div className="Write-open-diary">
@@ -23,16 +34,17 @@ class WriteOpenDiary extends Component {
 	    	<p>	오픈 일기 작성 중... </p>
 	    	<br/>
 	    	<form>
-		    	 <FormControl  className="diary-title"
+		    	 <input ref={ref=>this.title =ref } className="diary-title"
 	                type="text"
 	                placeholder="제목"
 	             />
 		    	 <br />
-			     <FormControl className="diary-contents" componentClass="textarea" placeholder="내용 입력" />
+			     <textarea ref={ref=>this.text =ref } className="diary-contents" componentClass="textarea" placeholder="내용 입력" />
+		     	
 		     </form>
 		     <br/>
 		     <div className='btn-box'>
-		    <Button className="diary-write-finish-btn"><Link to="/home">완료</Link></Button>
+		    <Button onClick={this.saveData.bind(this)} className="diary-write-finish-btn"><Link to="/home">완료</Link></Button>
 		    <Button className="diary-write-cancel-btn"><Link to="/home">취소</Link></Button>
 		    </div>
 		</section>

@@ -8,11 +8,12 @@ class WriteMyDiary extends Component {
 
   saveData(ev){
     const database = firebase.database();
-    const diaryRef = database.ref('/diarys');
+    const diaryRef = database.ref('/diary');
 	   
 	    diaryRef.push({
-	      name:this.title.value,
+	      title:this.title.value,
 	      text:this.text.value
+
 	    });
 		
   }
