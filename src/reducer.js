@@ -1,16 +1,13 @@
 //import
-
+import firebase from 'firebase';
+import fire from  './fire';
 
 //Actions
-const LOGIN = 'LOGIN';
+const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 const LOGOUT='LOGOUT';
+const DIARY_LIST_READY = 'DIARY_LIST_READY';
 
 //Action Creators
-function login(){
-	return{
-		type:LOGIN
-	}
-}
 
 function logout(){
 	return{
@@ -18,54 +15,66 @@ function logout(){
 	}
 }
 
-//Reducer
-
-
-
-
-const initialUserName = 'who';
-
-const initialState ={
-	isLogin : false,
-	currentUserName : initialUserName,
-	listOpenDiary : 'this is open diary'
+function loginSuccess (email) {
+	return {
+		type: LOGIN_SUCCESS,
+		email: email
+	};
 }
 
+function diaryListReady (diaryList) {
+	return {
+		type: DIARY_LIST_READY,
+		list: diaryList
+	};
+}
 
-function reducer(state=initialState,action){
+//Reducer
+const initialUserName = 'who';
+
+const initialState = {
+	isLogin : false,
+	currentUserName : initialUserName,
+	dairyList: {}
+};
+
+
+function reducer(state = initialState, action){
 	switch(action.type){
-		case LOGIN:
-			return applyLogin(state);
 		case LOGOUT:
 			return applyLogout(state);
+		case LOGIN_SUCCESS:
+			return {
+				isLogin: true,
+				currentUserName: action.email
+			};
+		case DIARY_LIST_READY:
+			return {
+				...state,
+				diaryList: action.list
+			};
 		default:
 		return state;
 	}
 }
+
+
+
 //Reducer Functions
-function applyLogin(state){
 
-
-	var testName='로그인 된 이름';
-
-	return{
-		...state,
-		isLogin:true,
-		currentUserName : testName
-
-	}
-}
 function applyLogout(state){
 	return{
 		...state,
 		isLogin:false,
-		currentUserName:initialUserName
+		currentUserName: initialUserName
 	}
 }
 //Export Action Creators
 export const actionCreators = {
-	login,
-	logout
+	diaryListReady,
+	logout,
+	loginSuccess
+	
 }
 //Export Reducer
 export default reducer;

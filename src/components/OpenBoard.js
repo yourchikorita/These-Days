@@ -3,11 +3,12 @@ import '../style/SignIn.css';
 
 export default class OpenBoard extends Component {
   render() {
+    console.log(this.props);
     return (
       <tr>
-        <td>1</td>
-        <td><p className="table-title">this is open</p></td>
-        <td><p className="thisp">누군가</p></td>
+        <td>{this.props.boardNum}</td>
+        <td><p className="table-title">{this.props.item.title}</p></td>
+        <td><p className="thisp">{this.props.item.user_name}</p></td>
         <td></td>
         <td>Table cell</td>
        </tr>

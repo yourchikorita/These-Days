@@ -4,7 +4,8 @@ import { Button,Table } from 'react-bootstrap';
 import {Tabs, Tab} from 'react-bootstrap-tabs';
 import Pagination from "react-js-pagination";
 import OpenBoard from '../OpenBoard';
-
+import firebase from 'firebase';
+import fire from  '../../fire';
 import '../../style/home.css';
 
 
@@ -15,18 +16,34 @@ class Home extends Component {
       activePage: 1
     };
   }
+
   handlePageChange(pageNumber) {
     console.log(`active page is ${pageNumber}`);
     this.setState({activePage: pageNumber});
   }
+
+
+  componentDidMount(){
+    this.props.onComponentMount();
+
+  }
+ 
+ 
   render() {
-  	 //  const mapToComponent = (data) => {
-    //   return data.map((myBoard, i) => {
-    //     return (<MyBoard myBoard={myBoard} key={i}/>);
-    //   });
-    // };
+     var t = this.props.diaryList;
+      if(t !== undefined){
+            console.log('UI::',Object.values(t)) ;
+            var ov =Object.values(t);
+            var mapToComponent = (data) => {
+              return data.map((item, i) => {
+                 return (<OpenBoard item={item} key={i} boardNum={i} />);
+              });
+            };
+      }
+    
+// console.log(Object.values(t));
   	
- console.log('home presenter',this.props);
+
     return (
       <div className="Home">
       <div className="wrap">
@@ -41,7 +58,7 @@ class Home extends Component {
 
 	    <section>
 	       	<span className="float-clear"></span>
-	    	<h1>These Days</h1>
+          <h1>These Days</h1>
 			<Tabs onSelect={(index, label) => console.log(label + ' selected')}>
    				<Tab label=" 공개 일기  ">
    				 	 <Button className="open-diary-write-btn"><Link to="/write-open-diary">공개 일기 작성</Link></Button>
@@ -56,7 +73,7 @@ class Home extends Component {
 		                      </tr>
 		                    </thead>
 		                    <tbody>
-		                     <OpenBoard />
+                        {(t !== undefined) && mapToComponent(ov)}
 		                    </tbody>
        			    	</Table>
 			             <Pagination
@@ -93,5 +110,8 @@ class Home extends Component {
     );
   }
 }
+
+
+
 
 export default Home;
