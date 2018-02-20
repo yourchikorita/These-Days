@@ -1,40 +1,36 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import '../style/write-my-diary.css';
+import '../../style/write-open-diary.css';
 import firebase from 'firebase';
+import Header from '../Header';
+import moment from 'moment';
+import 'moment/locale/ko';
 
-class WriteMyDiary extends Component {
-
-  saveData(ev){
+class WriteOpenDiary extends Component {
+	
+	saveData(ev){
+	var momentDate = moment().format('L h:mm a ');
     const database = firebase.database();
     const diaryRef = database.ref('/diary');
-	   
 	    diaryRef.push({
-	      title:this.title.value,
-	      text:this.text.value
-
-	    });
-		
-  }
-
+	     title:this.title.value,
+	      text:this.text.value,
+	      user_name:this.props.currentUserName,
+	      edit_date:momentDate
+	    });		
+    }
   render() {
+   
+  
     return (
-      <div className="Write-my-diary">
-      <div className="wrap">
-		<header>
-	       
-	       	<span className="welcome">
-	       	<Button ><Link to="/home">홈</Link></Button>
-	       	<Button ><Link to="/sign-in">로그아웃</Link></Button>
-	       	</span>
-	    </header>
-       	<br/>
-
-	    <section>
+      <div className="Write-open-diary">
+	      <div className="wrap">
+			<Header />
+	      <br/>
+	 	  <section>
 	       	<span className="float-clear"></span>
 	    	<h1>These Days</h1>
-	    	<p>	개인 일기 작성 중... </p>
 	    	<br/>
 	    	<form>
 		    	 <input ref={ref=>this.title =ref } className="diary-title"
@@ -58,4 +54,4 @@ class WriteMyDiary extends Component {
   }
 }
 
-export default WriteMyDiary;
+export default WriteOpenDiary;

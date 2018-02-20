@@ -7,7 +7,7 @@ import Home from './components/Home/index';
 import WriteMyDiary from './components/WriteMyDiary';
 import ReadMyDiary from './components/ReadMyDiary';
 import ReadOpenDiary from './components/ReadOpenDiary';
-import WriteOpenDiary from './components/WriteOpenDiary';
+import WriteOpenDiary from './components/WriteOpenDiary/container';
 
 const Root = ({ store }) => (
    <Provider store={store}>

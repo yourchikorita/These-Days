@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Button,FormControl } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import '../../style/SignIn.css';
 import { Link} from 'react-router-dom';
-import firebase from 'firebase';
-import fire from  '../../fire';
+
 
 class SignIn extends Component {
 

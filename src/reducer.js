@@ -1,6 +1,5 @@
 //import
-import firebase from 'firebase';
-import fire from  './fire';
+
 
 //Actions
 const LOGIN_SUCCESS = 'LOGIN_SUCCESS';

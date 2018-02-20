@@ -4,7 +4,7 @@ import {actionCreators} from '../../reducer';
 import SignIn from './presenter';
 import firebase from 'firebase';
 import fire from  '../../fire';
-import Home from '../Home/presenter'
+
 //connect는 store랑 components랑 연결해줌
 //store에서 state를 복사해서 container에다 넣기
 

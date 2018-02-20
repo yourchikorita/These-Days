@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import { Button,FormControl } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import '../style/write-open-diary.css';
 import firebase from 'firebase';
 

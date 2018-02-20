@@ -4,13 +4,11 @@ import { Button,Table } from 'react-bootstrap';
 import {Tabs, Tab} from 'react-bootstrap-tabs';
 import Pagination from "react-js-pagination";
 import OpenBoard from '../OpenBoard';
-import firebase from 'firebase';
-import fire from  '../../fire';
 import '../../style/home.css';
 
 
 class Home extends Component {
-	 constructor(props) {
+	constructor(props) {
     super(props);
     this.state = {
       activePage: 1
@@ -22,17 +20,14 @@ class Home extends Component {
     this.setState({activePage: pageNumber});
   }
 
-
   componentDidMount(){
     this.props.onComponentMount();
-
   }
- 
  
   render() {
      var t = this.props.diaryList;
       if(t !== undefined){
-            console.log('UI::',Object.values(t)) ;
+            // console.log('UI::',Object.values(t)) ;
             var ov =Object.values(t);
             var mapToComponent = (data) => {
               return data.map((item, i) => {
@@ -40,22 +35,16 @@ class Home extends Component {
               });
             };
       }
-    
-// console.log(Object.values(t));
-  	
-
     return (
       <div className="Home">
       <div className="wrap">
-		<header>
-	       
-	       	<span className="welcome">
-	       	<span>{this.props.currentUserName} 님 </span>
-	       	<Button ><Link to="/sign-in">로그아웃</Link></Button>
-	       	</span>
-	    </header>
-       	<br/>
-
+  		<header> 
+  	       	<span className="welcome">
+  	       	<span>{this.props.currentUserName} 님 </span>
+  	       	<Button ><Link to="/sign-in">로그아웃</Link></Button>
+  	       	</span>
+  	  </header>
+      <br/>
 	    <section>
 	       	<span className="float-clear"></span>
           <h1>These Days</h1>
@@ -75,7 +64,7 @@ class Home extends Component {
 		                    <tbody>
                         {(t !== undefined) && mapToComponent(ov)}
 		                    </tbody>
-       			    	</Table>
+       			   </Table>
 			             <Pagination
 				          activePage={this.state.activePage}
 				          itemsCountPerPage={10}
@@ -103,6 +92,7 @@ class Home extends Component {
 
    				</Tab>
 			</Tabs>
+
 		</section>
 
       </div>
